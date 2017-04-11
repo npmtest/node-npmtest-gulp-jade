@@ -1,1 +1,40 @@
-{     "devDependencies": {         "gulp-jade": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-gulp-jade",     "homepage": "https://github.com/npmtest/node-npmtest-gulp-jade",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-gulp-jade.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "test coverage for [gulp-jade (v1.1.0)](https://github.com/phated/gulp-jade#readme) [![npm package](https://img.shields.io/npm/v/npmtest-gulp-jade.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-jade) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-jade.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-jade)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "gulp-jade": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-gulp-jade",
+    "keywords": [
+        "coverage",
+        "test",
+        "gulp-jade"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_gulp_jade.js",
+    "name": "npmtest-gulp-jade",
+    "nameAlias": "npmtest_gulp_jade",
+    "nameOriginal": "npmtest-gulp-jade",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-gulp-jade.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
