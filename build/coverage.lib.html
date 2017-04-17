@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-gulp-jade/gulp-jade/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-gulp-jade/node_modules/gulp-jade/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-jade">npmtest-gulp-jade (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-jade/gulp-jade/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-jade/node_modules/gulp-jade/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">26.92% <small>(7 / 26)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-jade/gulp-jade/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-jade/node_modules/gulp-jade/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -313,49 +315,48 @@ var defaultJade = require('jade');
 var ext = require('gulp-util').replaceExtension;
 var PluginError = require('gulp-util').PluginError;
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function(options){</span>
-<span class="cstat-no" title="statement not covered">  var opts = extend({}, options);</span>
-<span class="cstat-no" title="statement not covered">  var jade = opts.jade || defaultJade;</span>
+module.exports = <span class="fstat-no" title="function not covered" >function(options){</span>
+<span class="cstat-no" title="statement not covered" >  var opts = extend({}, options);</span>
+<span class="cstat-no" title="statement not covered" >  var jade = opts.jade || defaultJade;</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">  function CompileJade(file, enc, cb){</span>
-<span class="cstat-no" title="statement not covered">    opts.filename = file.path;</span>
+<span class="fstat-no" title="function not covered" >  function CompileJade(file, enc, cb){</span>
+<span class="cstat-no" title="statement not covered" >    opts.filename = file.path;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if(file.data){</span>
-<span class="cstat-no" title="statement not covered">      opts.data = file.data;</span>
+<span class="cstat-no" title="statement not covered" >    if(file.data){</span>
+<span class="cstat-no" title="statement not covered" >      opts.data = file.data;</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    file.path = ext(file.path, opts.client ? '.js' : '.html');</span>
+<span class="cstat-no" title="statement not covered" >    file.path = ext(file.path, opts.client ? '.js' : '.html');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if(file.isStream()){</span>
-<span class="cstat-no" title="statement not covered">      return cb(new PluginError('gulp-jade', 'Streaming not supported'));</span>
+<span class="cstat-no" title="statement not covered" >    if(file.isStream()){</span>
+<span class="cstat-no" title="statement not covered" >      return cb(new PluginError('gulp-jade', 'Streaming not supported'));</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if(file.isBuffer()){</span>
-<span class="cstat-no" title="statement not covered">      try {</span>
-<span class="cstat-no" title="statement not covered">        var compiled;</span>
-<span class="cstat-no" title="statement not covered">        var contents = String(file.contents);</span>
-<span class="cstat-no" title="statement not covered">        if(opts.client){</span>
-<span class="cstat-no" title="statement not covered">          compiled = jade.compileClient(contents, opts);</span>
+<span class="cstat-no" title="statement not covered" >    if(file.isBuffer()){</span>
+<span class="cstat-no" title="statement not covered" >      try {</span>
+<span class="cstat-no" title="statement not covered" >        var compiled;</span>
+<span class="cstat-no" title="statement not covered" >        var contents = String(file.contents);</span>
+<span class="cstat-no" title="statement not covered" >        if(opts.client){</span>
+<span class="cstat-no" title="statement not covered" >          compiled = jade.compileClient(contents, opts);</span>
         } else {
-<span class="cstat-no" title="statement not covered">          compiled = jade.compile(contents, opts)(opts.locals || opts.data);</span>
+<span class="cstat-no" title="statement not covered" >          compiled = jade.compile(contents, opts)(opts.locals || opts.data);</span>
         }
-<span class="cstat-no" title="statement not covered">        file.contents = new Buffer(compiled);</span>
+<span class="cstat-no" title="statement not covered" >        file.contents = new Buffer(compiled);</span>
       } catch(e) {
-<span class="cstat-no" title="statement not covered">        return cb(new PluginError('gulp-jade', e));</span>
+<span class="cstat-no" title="statement not covered" >        return cb(new PluginError('gulp-jade', e));</span>
       }
     }
-<span class="cstat-no" title="statement not covered">    cb(null, file);</span>
+<span class="cstat-no" title="statement not covered" >    cb(null, file);</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return through.obj(CompileJade);</span>
+<span class="cstat-no" title="statement not covered" >  return through.obj(CompileJade);</span>
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 08:23:46 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 11:58:26 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
