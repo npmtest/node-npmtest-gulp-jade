@@ -1,4 +1,7 @@
-# test coverage for  [gulp-jade (v1.1.0)](https://github.com/phated/gulp-jade#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-jade.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-jade) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-jade.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-jade)
+# npmtest-gulp-jade
+
+#### test coverage for  [gulp-jade (v1.1.0)](https://github.com/phated/gulp-jade#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-jade.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-jade) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-jade.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-jade)
+
 #### Compile Jade templates
 
 [![NPM](https://nodei.co/npm/gulp-jade.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-jade)
